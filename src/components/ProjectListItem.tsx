@@ -49,7 +49,11 @@ export const ProjectListItem = ({
         <Figure
           className="aspect-4/3"
           alt={poster?.alt}
-          src={poster ? `assets/projects/${id}/${poster.src}` : undefined}
+          src={
+            poster
+              ? `${import.meta.env.BASE_URL}assets/projects/${id}/${poster.src}`
+              : undefined
+          }
         />
       </Link>
 
