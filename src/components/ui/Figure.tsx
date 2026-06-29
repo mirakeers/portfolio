@@ -43,7 +43,11 @@ const Image = ({ alt, projectId, src }: Partial<FigureProps>) => (
   <img
     className="h-full w-full object-cover object-center"
     alt={alt ?? ""}
-    src={projectId ? `/assets/projects/${projectId}/${src}` : src}
+    src={
+      projectId
+        ? `${import.meta.env.BASE_URL}assets/projects/${projectId}/${src}`
+        : `${import.meta.env.BASE_URL}assets/${src}`
+    }
   />
 );
 const Video = ({
