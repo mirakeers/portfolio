@@ -46,7 +46,7 @@ const Image = ({ alt, projectId, src }: Partial<FigureProps>) => (
     src={
       projectId
         ? `${import.meta.env.BASE_URL}assets/projects/${projectId}/${src}`
-        : `${import.meta.env.BASE_URL}assets/${src}`
+        : `${import.meta.env.BASE_URL}${src}`
     }
   />
 );
