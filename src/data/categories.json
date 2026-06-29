@@ -1,0 +1,32 @@
+[
+  {
+    "id": "app",
+    "name": "App & Web",
+    "icon": "m10:mobile-layout-outline",
+    "color": "teal"
+  },
+  {
+    "id": "data",
+    "name": "Data Science & Visuals",
+    "icon": "m10:pie-chart-outline",
+    "color": "blue"
+  },
+  {
+    "id": "motion",
+    "name": "Motion Design",
+    "icon": "m10:video-camera-back-outline-rounded",
+    "color": "orange"
+  },
+  {
+    "id": "media",
+    "name": "Media installation",
+    "icon": "m10:interactive-space-outline",
+    "color": "pink"
+  },
+  {
+    "id": "graphic",
+    "name": "Graphics & Illustration",
+    "icon": "m10:draw",
+    "color": "lime"
+  }
+]

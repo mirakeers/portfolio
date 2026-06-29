@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 700 800;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Nunito", "Open Sans", "sans-serif";
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+
+  --color-gray-50: oklch(0.985 0.004 300);
+  --color-gray-100: oklch(0.97 0.006 300);
+  --color-gray-200: oklch(0.922 0.01 300);
+  --color-gray-300: oklch(0.87 0.014 300);
+  --color-gray-400: oklch(0.708 0.02 300);
+  --color-gray-500: oklch(0.556 0.028 300);
+  --color-gray-600: oklch(0.446 0.035 300);
+  --color-gray-700: oklch(0.372 0.04 300);
+  --color-gray-800: oklch(0.278 0.045 300);
+  --color-gray-900: oklch(0.21 0.06 300);
+  --color-gray-950: oklch(0.13 0.08 300);
+
+  --color-interaction: var(--color-violet-400);
+  --color-interaction-hover: var(--color-violet-600);
+  --color-bg-dark: var(--color-gray-950);
+  --color-bg-page: var(--color-black);
+  --color-t-base: var(--color-gray-100);
+  --color-t-light: var(--color-gray-400);
+  --color-t-placeholder: var(--color-gray-500);
+  --color-border-base: var(--color-gray-700);
+  --color-border-light: var(--color-gray-800);
+  --color-success: var(--color-green-300);
+
+  --font-weight-inherit: inherit;
+}
+
+@utility buttonText {
+  @apply inline-flex gap-2 items-center rounded px-2 -mx-2 py-1 -my-1 text-xl font-bold text-t-light transition-colors hover:text-interaction hover:bg-gray-950;
+}
+
+@utility containerPadding {
+  @apply px-4 sm:px-8 md:px-16;
+}
+@utility text-align-inherit {
+  text-align: inherit;
+}
+@utility absolute-x-center {
+  @apply absolute left-1/2 -translate-x-1/2;
+}
+@utility popup-down {
+  @apply absolute-x-center  top-full mt-2 z-20 rounded-md bg-bg-dark border-2 border-slate-900;
+}
+@utility iconbutton {
+  @apply cursor-pointer text-t-light hover:text-t-base transition-colors;
+}
+
+@utility paragraph {
+  @apply text-t-light text-xl/relaxed lg:text-2xl/relaxed;
+}
+@utility h1 {
+  @apply text-4xl sm:text-5xl font-extrabold;
+}
+
+@utility h2 {
+  @apply font-extrabold tracking-wide uppercase text-t-light;
+}
+@utility h3 {
+  @apply text-2xl sm:text-3xl font-extrabold;
+}
+h1 {
+  @apply h1;
+}
+h2 {
+  @apply h2;
+}
+
+h3 {
+  @apply h3;
+}

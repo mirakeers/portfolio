@@ -1,0 +1,39 @@
+[
+  {
+    "id": "crownd",
+    "name": "Real estate platform with framer motion",
+    "categories": ["app", "motion"],
+    "intro": "Framer motion is used to create smooth transitions for this luxury real-estate web application",
+    "description": "I love sugar plum lemon drops apple pie pudding danish. Sweet roll sugar plum tootsie roll candy liquorice jujubes gummies cake.",
+    "details": "",
+    "year": 2023
+  },
+  {
+    "id": "tina",
+    "name": "Pädagogikpaket",
+    "intro": "An interactive SVG that transforms a static educational graphic into an engaging experience through animations and hover interactions.",
+    "description": "",
+    "details": "",
+    "year": 2021,
+    "categories": ["app", "motion"],
+    "tools": ["HTML Canvas", "AfterEffects"]
+  },
+  {
+    "id": "functn-ptv",
+    "name": "People Time View",
+    "categories": ["app"],
+    "tools": ["React"],
+    "intro": "Some intro",
+    "year": 2023,
+    "poster": {
+      "alt": "Screenshot dashboard",
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "alt": "Screenshot: people overview",
+        "src": "img1.png"
+      }
+    ]
+  }
+]

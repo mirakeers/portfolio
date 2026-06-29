@@ -1,0 +1,410 @@
+[
+  {
+    "id": "dancemachine",
+    "name": "DanceMachine",
+    "intro": "An interactive dance-to-music installation, that combines machine learning with art to create music based on a dancer's body movements.",
+    "description": "DanceMachine combines machine learning with art to create music based on a dancer's body movements. It uses neural networks to map Microsoft Kinect skeleton data to a music track in Ableton Live.",
+    "details": "It is created as part of the bachelor's thesis «Machine Learning for Creating Creative Content» at Erasmus University College Brussels. In this 50-page thesis, I discussed the context and applications of machine learning and art, as well as explain the theories useful for creating interactive installations. During development, I experimented with several machine learning approaches before settling on a regression model, as it provided the most natural mapping between body movements and musical output. The creation of DanceMachine explores an alternative relationship between dance and music, where movement becomes the primary input for musical expression.",
+    "year": 2018,
+    "categories": ["media", "data"],
+    "tools": [
+      "python",
+      "Kinect Developer Kit",
+      "Ableton Live",
+      "Open Sound Control",
+      "scikit-learn"
+    ],
+    "roles": ["Conceptualization", "Design", "Implementation"],
+    "poster": {
+      "alt": "Dancemanchine poster image",
+      "src": "c5fea470865279.Y3JvcCwzODU2LDMwMTYsMCw0Mjk.png"
+    },
+    "assets": [
+      {
+        "alt": "DanceMachine promovideo",
+        "src": "292678461",
+        "type": "vimeo_video"
+      },
+      {
+        "alt": "presentation poster DanceMachine",
+        "src": "b6d74d70865279.5bb21e3d7f1e9.webp"
+      },
+      {
+        "alt": "Bachelor thesis front page",
+        "src": "9970e570865279.5bb21e3d7ea14.png"
+      },
+      {
+        "alt": "Bachelor thesis intro",
+        "src": "79e23d70865279.5bb21e3d808e3.png"
+      }
+    ]
+  },
+  {
+    "id": "vps",
+    "name": "Control Center",
+    "categories": ["app"],
+    "tools": [
+      "TypeScript",
+      "Svelte 5",
+      "Vite",
+      "tailwindcss",
+      "WebRTC",
+      "Storybook"
+    ],
+
+    "roles": ["Design", "Front-end implementation"],
+    "intro": "A Svelte web application that simplifies the control interface of an eye-tracking device.",
+    "description": "For this project, I created a web application in Svelte that works as a control interface for an eyetracking device. Before, the old device had a Linux-based UI, and for their new unit, I designed and developed a browser-based version, focusing on improving usability and accessibility. ",
+    "details": "The interface was redesigned around a clearer structure and a reduced number of interaction steps, following a least-clicks approach to simplify common tasks. A key focus was designing reliable real-time feedback for an embedded eye-tracking device using WebRTC and device APIs. Rather than letting individual components react directly to events, the application maintained a centralized representation of the device state, ensuring the interface remained accurate during reconnects, connection loss and long-running sessions. Particular attention was given to clearly communicating loading, recovery and error states, allowing users to always understand the current state of the device.",
+    "year": 2025,
+    "poster": {
+      "alt": "Screenshot: video stream",
+      "src": "poster.webp"
+    },
+    "assets": [
+      {
+        "alt": "Screenshot: login",
+        "src": "img1.webp"
+      },
+      {
+        "alt": "Screenshot:  dashboard",
+        "src": "img2.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "init-analytics",
+    "name": "Analytics dashboard",
+    "categories": ["app", "data"],
+    "tools": ["React", "Dash", "Plotly.js"],
+    "roles": ["Design", "Front-end implementation"],
+    "intro": "An analytics dashboard for exploring and visualizing KPIs.",
+    "description": "This dashboard was designed as a central place for the client to view, manage and visualize key metrics in one interface. Besides implementing the application, I designed the interactive Plotly visualizations, focusing on clear presentation, interactive filtering and accessible KPI tracking.",
+    "details": "The implementation prioritized a fast and efficient delivery process, supported by a streamlined tech setup that enabled quick iterations and direct feedback from the client. To support recurring analysis, saved presets allow consistent reuse of specific views. Data export functionality was added to enable sharing and reporting outside the tool, keeping the workflow practical and flexible.",
+    "year": 2022,
+    "poster": {
+      "alt": "Screenshot dashboard",
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "alt": "Screenshot: export data",
+        "src": "img1.png"
+      },
+      {
+        "alt": "Screenshot: load preset",
+        "src": "img2.png"
+      }
+    ]
+  },
+  {
+    "id": "oekotex",
+    "name": "CMS: Design system and UX Research",
+    "categories": ["app"],
+    "tools": ["React", "Figma", "Storybook"],
+    "roles": ["Design", "Front-end implementation", "Client communication"],
+    "intro": "A scalable design system for a CMS rebranding project.",
+    "description": "This project focused on building a design system and improving the UX of an existing CMS as part of a larger rebranding effort. It aimed to replace inconsistent interface patterns with a structured, reusable component system.",
+    "details": "To understand usage patterns and identify key usability issues in the existing system, a lot of focus was put on real user feedback, combining qualitative interviews and product analytics. These findings informed the direction of the redesign and the priorities for the system. Based on this research, I created a scalable component library in Figma, covering core UI elements and edge cases. The system was documented and implemented using Storybook to ensure consistency, reusability, and alignment across the product team.",
+    "year": 2022,
+    "poster": {
+      "alt": "Screenshot homepage",
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "alt": "Screenshot: create new customer",
+        "src": "img1.png"
+      },
+      {
+        "alt": "Screenshot: customer profile",
+        "src": "img2.png"
+      },
+      {
+        "alt": "Design system: theme",
+        "src": "img3.png"
+      },
+      {
+        "alt": "Design system: grid",
+        "src": "img4.png"
+      },
+      {
+        "alt": "Design system: atoms",
+        "src": "img5.png"
+      },
+      {
+        "alt": "Design system: molecules",
+        "src": "img6.png"
+      }
+    ]
+  },
+  {
+    "id": "cities",
+    "name": "Cities",
+    "intro": "A city management web application in Vue with a focus on component-driven UI and design consistency.",
+    "description": "For this project I led the switch from static, screen-based design workflows, into a component-driven system. The goal was to improve consistency and make the interface easier to scale across multiple parts of the product.",
+    "details": "I taught the design team how to work with reusable components in Adobe XD and established the foundation of a design system. Next, I created a Vue 3 component library, developed and documented many of the new components, and implemented several new pages using the shared component library.",
+    "year": 2021,
+    "context": "Work",
+    "categories": ["app"],
+    "tools": ["Vue 3", "Storybook", "Adobe XD"],
+    "roles": [
+      "Design (in team of 2)",
+      "Front-end implementation (in team of 6)"
+    ],
+    "poster": {
+      "alt": "Cities web app",
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "alt": "Screenshot Homepage",
+        "src": "img1.png"
+      },
+      {
+        "alt": "Screenshot Business Profile",
+        "src": "img2.png"
+      },
+      {
+        "alt": "Screenshots mobile",
+        "src": "img3.png"
+      }
+    ]
+  },
+  {
+    "id": "fleetly",
+    "name": "Fleetly",
+    "intro": "UX Design for a ridesharing application, focused on intuitive user flows",
+    "description": "This project focused on the early design and conceptualization of a ridesharing application. The main challenge was creating user flows that made booking and managing rides simple and pleasant to use. Through multiple design iterations, workshops and weekly meetings, I translated the client's ideas into a coherent user experience.",
+    "details": "This project focused on the early design and conceptualization of a ridesharing application. The main challenge was creating user flows that made booking and managing rides simple and pleasant to use. Through multiple design iterations, workshops and weekly meetings, I translated the client's ideas into a coherent user experience.",
+    "year": 2020,
+    "context": "Work",
+    "categories": ["app", "motion"],
+    "tools": ["Adobe XD", "AfterEffects", "Lotty"],
+    "roles": [
+      "Conceptualization",
+      "Design",
+      "Illustration & Animation",
+      "Client communication"
+    ],
+    "poster": {
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "src": "img1.png"
+      },
+      {
+        "src": "img2.png"
+      },
+      {
+        "src": "img3.png"
+      },
+      {
+        "src": "img4.png"
+      }
+    ]
+  },
+  {
+    "id": "ug",
+    "name": "United Group",
+    "intro": "UX research and interface design for a multi-vendor marketplace platform",
+    "description": "This project focused on defining the foundations of a new multi-vendor marketplace. I researched existing e-commerce platforms, developed the information architecture and category hierarchy, mapped the complete user flows, and translated these into wireframes before creating the first visual interface designs.",
+    "details": "A large part of the project involved structuring a complex marketplace with many independent sellers into an intuitive browsing and purchasing experience. The resulting wireframes and screen designs established the UX direction for the platform and served as the foundation for further development.",
+    "year": 2020,
+    "context": "Work",
+    "categories": ["app"],
+    "tools": ["Adobe XD", "Balsamiq"],
+    "roles": ["Conceptualization", "Design", "Client communication"],
+    "poster": {
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "src": "img1.png"
+      },
+      {
+        "src": "img2.png"
+      },
+      {
+        "src": "img3.png"
+      },
+      {
+        "src": "img4.png"
+      },
+      {
+        "src": "img5.png"
+      },
+      {
+        "src": "img6.png"
+      }
+    ]
+  },
+  {
+    "id": "sawadi",
+    "name": "Sawadi",
+    "intro": "A social media campaign for a sustainable fashion store, establishing its first digital presence to reach a younger audience beyond its traditional walk-in customer base.",
+    "description": "The campaign started by setting up the store’s first digital presence. Before this, the business mainly relied on people walking by, so social media accounts were created from scratch and a consistent visual style was defined to make the brand recognizable online.",
+    "details": "Google Maps SEO was also set up to improve local discoverability, and content was managed through Hootsuite to maintain a consistent posting workflow. This shifted the store from a purely offline presence to a structured basic online presence across key platforms.",
+    "year": 2020,
+    "context": "Freelance",
+    "categories": ["graphic"],
+    "tools": ["Canva", "Hootsuite", "Illustrator"],
+    "roles": ["Visual identity", "Social media marketing", "Graphic design"],
+    "poster": {
+      "alt": "Sawadi Instagram post",
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "alt": "Collection of Instagram stories for Sawadi brand (2020)",
+        "src": "img1.png"
+      },
+      {
+        "alt": "Collection of Instagram stories for Ginz brand (2020)",
+        "src": "img2.png"
+      },
+      {
+        "alt": "Ginz extended logo",
+        "src": "img3.png"
+      },
+      {
+        "alt": "Ginz Bar logo",
+        "src": "img4.png"
+      }
+    ]
+  },
+  {
+    "id": "surveywonders",
+    "name": "Surveywonders",
+    "intro": "Early design work for a startup that turns survey data into charts and reports, including website and supporting materials.",
+    "description": "This project focused on designing a website and supporting materials for a startup that visualizes survey data into  charts and reports. A review of existing touchpoints such as the website, web application, helpdesk, social media, and sales presentation was carried out to understand the current state and structure a new direction.",
+    "details": "Based on this, a consistent visual style was developed and applied across the website and related materials. Chart layouts were designed to present survey results in a clearer and more structured way. Website pages, presentations, and marketing assets were then created and iterated in a short timeframe. The final implementation was adapted to an existing template setup, requiring adjustments to maintain visual consistency within technical constraints.",
+    "year": 2016,
+    "context": "Work",
+    "categories": ["app", "data"],
+    "tools": ["JQuery", "Illustrator"],
+    "roles": ["Conceptualization", "Design", "Front-end implementation"],
+    "poster": {
+      "alt": "Screenshot homepage",
+      "src": "poster.jpg"
+    },
+    "assets": [
+      {
+        "alt": "Screenshot (1)",
+        "src": "img1.jpg"
+      },
+      {
+        "alt": "Screenshot (2)",
+        "src": "img2.jpg"
+      },
+      {
+        "alt": "Chart design Radar",
+        "src": "img3.png"
+      },
+      {
+        "alt": "Chart design Pie",
+        "src": "img4.png"
+      },
+      {
+        "alt": "Chart design Stacked bar",
+        "src": "img5.png"
+      }
+    ]
+  },
+  {
+    "id": "enriched",
+    "name": "Enriched Reality",
+    "intro": "Landing page design for a startup focused on augmented experiences, created in Sketch.",
+    "description": "This project focused on designing a visually engaging landing page and establishing an early visual identity for the startup. Screen designs were created in Sketch, with emphasis on layout, hierarchy, and overall look and feel.",
+    "details": "The goal was to explore a bold visual direction suitable for an emerging product, resulting in a set of early-stage interface designs used to communicate the concept.",
+    "year": 2017,
+    "context": "Work",
+    "categories": ["app", "graphic"],
+    "tools": ["Sketch", "Illustrator"],
+    "roles": ["Conceptualization", "Design"],
+    "poster": {
+      "alt": "Enriched reality",
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "alt": "Screenshot Homepage",
+        "src": "img1.png"
+      },
+      {
+        "alt": "Screenshot Approach",
+        "src": "img2.png"
+      },
+      {
+        "alt": "Screenshot Lab",
+        "src": "img3.png"
+      },
+      {
+        "alt": "Screenshot Contact",
+        "src": "img4.png"
+      }
+    ]
+  },
+  {
+    "id": "diamondhunt",
+    "name": "Diamond Hunt",
+    "intro": "A virtual reality game exploring gaze-based interaction with Google Cardboard.",
+    "description": "Diamond Hunt is a virtual reality game prototype, where I explore how interaction changes when traditional input methods are replaced by head movement and view direction.",
+    "details": "A simple game was created in Unity where players navigate and collect objects by looking at them, introducing a different way of thinking about feedback and user interaction. As my first VR projects, it served as an introduction to spatial interface design and interaction patterns unique to VR experiences.",
+    "year": 2017,
+    "context": "School",
+    "categories": ["app", "motion"],
+    "tools": ["Unity", "Google Cardboard"],
+    "roles": ["Conceptualization", "Design", "Implementation"],
+    "poster": {
+      "alt": "Diamond hunt game art",
+      "src": "poster.png"
+    },
+    "assets": [
+      {
+        "alt": "Promo video Diamond Hunt",
+        "src": "aSjRtwNINeM",
+        "type": "yt_video"
+      },
+      {
+        "alt": "Screenshot unity development",
+        "src": "img1.png"
+      }
+    ]
+  },
+  {
+    "id": "brochure",
+    "name": "Graduation brochure",
+    "categories": ["graphic"],
+    "tools": ["InDesign"],
+    "intro": "A graduation booklet designed and prepared for professional print.",
+    "description": "The graduation booklet was commissioned by the school for its annual Design and Development graduation event. Based on the provided program and graduate information, I designed the cover and layout of the brochure.",
+    "details": "The design process was focused around hierarchy, to handle the text-heavy content in a way that feels light and readable. In addition to the layout and typography, I prepared the document for professional printing, ensuring correct print specifications and delivering a press-ready file with the required documentation.",
+    "year": 2016,
+    "context": "Freelance",
+    "roles": ["Conceptualization", "Graphic design"],
+    "poster": {
+      "alt": "Cover of graduation brochure",
+      "src": "poster.jpg"
+    },
+    "assets": [
+      {
+        "alt": "Example page of graduation brochure (1)",
+        "src": "img1.jpg"
+      },
+      {
+        "alt": "Example page of graduation brochure (2)",
+        "src": "img2.jpg"
+      },
+      {
+        "alt": "Example page of graduation brochure (3)",
+        "src": "img3.jpg"
+      },
+      {
+        "alt": "Example page of graduation brochure (4)",
+        "src": "img4.jpg"
+      }
+    ]
+  }
+]
