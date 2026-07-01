@@ -35,7 +35,7 @@ export const Figure = ({
 
 const Placeholder = ({ alt }: Partial<FigureProps>) => (
   <div className="flex flex-col items-center justify-around aspect-video w-full gap-2 text-white/30">
-    <Icon size="lg" name="m10:image" />
+    <Icon size={30} name="m10:image" />
     {alt ?? ""}
   </div>
 );

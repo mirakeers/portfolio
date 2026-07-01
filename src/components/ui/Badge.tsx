@@ -32,12 +32,12 @@ export const Badge = ({
   const Component = as;
   const sizeCss =
     size === "md"
-      ? "gap-1.5 px-1.5 py-1 text-xs"
-      : "gap-1.5 px-1.5 py-1 text-xs sm:gap-2 sm:px-2 sm:py-1 sm:text-base";
+      ? "gap-1.5 px-1.5 py-1 text-xs/tight"
+      : "gap-1.5 px-1.5 py-1 text-xs/tight sm:gap-2 sm:px-2 sm:py-1 sm:text-base/tight";
   const badgeCss = `transition-colors font-extrabold uppercase tracking-wide inline-flex items-center rounded whitespace-nowrap ${sizeCss} ${COLOR_CSS[color]} ${className}`;
   return (
     <Component className={badgeCss} {...props}>
-      {icon && <Icon name={icon} size="sm" />}
+      {icon && <Icon name={icon} size={20} />}
       {children}
     </Component>
   );

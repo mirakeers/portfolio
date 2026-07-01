@@ -66,7 +66,7 @@ const Category = ({
       `}
       onClick={() => onClick(id)}
     >
-      <Icon size="lg" name={icon} />
+      <Icon size={30} name={icon} />
       <span className="inline.block">
         {name} {count !== undefined && <>({count})</>}
       </span>
