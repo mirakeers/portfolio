@@ -48,6 +48,8 @@ const Image = ({ alt, projectId, src }: Partial<FigureProps>) => (
         ? `${import.meta.env.BASE_URL}assets/projects/${projectId}/${src}`
         : src
     }
+    loading="lazy"
+    decoding="async"
   />
 );
 const Video = ({

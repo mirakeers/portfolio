@@ -38,6 +38,8 @@ export const PageProject = ({ projects }: PageProjectProps) => {
 
   return (
     <>
+      <title>{`${name} | Portfolio @mirakeers`}</title>
+
       <h1>{name}</h1>
 
       <div className="flex flex-col gap-4">

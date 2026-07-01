@@ -1,13 +1,13 @@
 import { useRef, type ComponentProps } from "react";
 import type { Project } from "../types";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useIsPresent, useScroll, useTransform } from "motion/react";
 import { Badge } from "./ui/Badge";
 import { Figure } from "./ui/Figure";
 import { BadgeList } from "./BadgeList";
 import { Icon } from "./ui/Icon";
 import { Link } from "react-router-dom";
 
-type ProjectListItemProps = { onOpenProject?: () => void } & Project &
+type ProjectListItemProps = { onOpenProject: () => void } & Project &
   ComponentProps<typeof motion.li>;
 
 export const ProjectListItem = ({
@@ -33,16 +33,22 @@ export const ProjectListItem = ({
 
   const opacity = useTransform(scrollYProgress, inputRange, [0.6, 1, 1, 0.6]);
   const scale = useTransform(scrollYProgress, inputRange, [0.85, 1, 1, 0.85]);
+
+  const isPresent = useIsPresent();
+
   const linkProps = {
     to: `/${id}`,
     state: { pageTransition: "slideFromRight" },
-    onClick: () => onOpenProject && onOpenProject(),
+    onClick: () => onOpenProject(),
   };
   return (
     <motion.li
       id={id}
       className={`flex flex-wrap gap-8 relative ${className}`}
-      style={{ opacity, scale }}
+      style={{
+        opacity: isPresent ? opacity : opacity.get(),
+        scale: isPresent ? scale : scale.get(),
+      }}
       {...props}
     >
       <Link {...linkProps} className="flex-[0_0_100%] md:flex-1">

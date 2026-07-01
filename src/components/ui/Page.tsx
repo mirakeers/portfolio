@@ -1,13 +1,17 @@
-import { motion, useIsPresent } from "motion/react";
-import { useEffect, type ComponentProps } from "react";
+import {
+  motion,
+  useIsPresent,
+  useMotionValueEvent,
+  useScroll,
+} from "motion/react";
+import { useEffect, useState, type ComponentProps } from "react";
 import type { PageTransition } from "../../types";
 
 type PageProps = {
   name: string;
   pageTransition?: PageTransition;
-  animateOutOffset?: number;
-  onPageLoad?: () => void;
   layer?: "base" | "overlay";
+  targetScrollY?: number;
 } & ComponentProps<typeof motion.main>;
 
 const layerClasses = {
@@ -19,16 +23,32 @@ export const Page = ({
   name,
   pageTransition = "fade",
   layer = "base",
+  targetScrollY,
   className = "",
   children,
-  animateOutOffset = 0,
-  onPageLoad,
   ...props
 }: PageProps) => {
   const isPresent = useIsPresent();
+  const { scrollY } = useScroll();
+  const [finalScrollY, setFinalScrollY] = useState(window.scrollY);
+  const [hasScrolled, setHasScrolled] = useState(false);
   useEffect(() => {
-    if (onPageLoad) onPageLoad();
-  }, [onPageLoad]);
+    if (hasScrolled || targetScrollY === undefined) return;
+
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: targetScrollY,
+        behavior: "instant",
+      });
+      setHasScrolled(true);
+    });
+  }, [targetScrollY, hasScrolled]);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (isPresent) {
+      setFinalScrollY(latest);
+    }
+  });
 
   const initial =
     pageTransition === "fade" ? { opacity: 0 } : { opacity: 1, x: "100%" };
@@ -42,14 +62,14 @@ export const Page = ({
       id={name}
       className={`
         bg-bg-page containerPadding flex flex-col gap-8 sm:gap-12 md:gap-16 py-8 md:py-16
-        ${isPresent ? "relative" : "absolute inset-x-0"}
+        ${isPresent ? "relative" : "fixed"}
         ${layerClasses[layer]}
         ${className}
       `}
       initial={initial}
       animate={animate}
       exit={exit}
-      style={{ translateY: isPresent ? 0 : -animateOutOffset }}
+      style={{ translateY: isPresent ? 0 : -finalScrollY }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       {...props}
     >

@@ -21,8 +21,8 @@ function App() {
   const [projectPageTransition, setProjectPageTransition] =
     useState<PageTransition>("fade");
 
-  const [animateOutOffset, setAnimateOutOffset] = useState(0);
   const [homeY, setHomeY] = useState(0);
+  const [targetScrollY, setTargetScrollY] = useState(0);
 
   const { scrollY } = useScroll();
   const headerRef = useRef<HTMLDivElement>(null);
@@ -55,33 +55,18 @@ function App() {
 
   const onCategoryChange = (categoryId: string | undefined) => {
     setActiveCategory(categoryId);
-    window.scrollTo(0, 0);
+    window.scrollTo(0, headerRef.current?.offsetHeight ?? 0);
   };
 
   const onOpenProject = () => {
-    const currentY = scrollY.get();
-    const targetScrollY = headerRef.current?.clientHeight ?? 0;
-
-    setHomeY(currentY);
+    setHomeY(scrollY.get());
     setProjectPageTransition("slideFromRight");
-    setAnimateOutOffset(currentY);
-
-    window.scrollTo({
-      top: targetScrollY,
-      behavior: "instant",
-    });
+    setTargetScrollY(headerRef.current?.offsetHeight ?? 0);
   };
 
   const onBackToOverview = () => {
-    const currentY = scrollY.get();
-
     setProjectPageTransition("slideFromRight");
-    setAnimateOutOffset(currentY);
-
-    window.scrollTo({
-      top: homeY,
-      behavior: "instant",
-    });
+    setTargetScrollY(homeY);
   };
 
   return (
@@ -121,7 +106,7 @@ function App() {
                   name="home"
                   pageTransition="fade"
                   layer="base"
-                  animateOutOffset={animateOutOffset}
+                  targetScrollY={targetScrollY}
                 >
                   <PageHome
                     projects={filteredProjects}
@@ -139,8 +124,8 @@ function App() {
                   name="project"
                   pageTransition={projectPageTransition}
                   layer="overlay"
-                  animateOutOffset={animateOutOffset}
                   className="max-w-5xl mx-auto"
+                  targetScrollY={targetScrollY}
                 >
                   <PageProject projects={projects} />
                 </Page>
