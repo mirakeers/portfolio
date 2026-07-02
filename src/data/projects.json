@@ -3,7 +3,7 @@
     "id": "dancemachine",
     "name": "DanceMachine",
     "intro": "An interactive dance-to-music installation, that combines machine learning with art to create music based on a dancer's body movements.",
-    "description": "DanceMachine combines machine learning with art to create music based on a dancer's body movements. It uses neural networks to map Microsoft Kinect skeleton data to a music track in Ableton Live.",
+    "description": "DanceMachine combines machine learning with art to create music based on a dancer's body movements. It uses a regression model to map Microsoft Kinect skeleton data to a music track in Ableton Live.",
     "details": "It is created as part of the bachelor's thesis «Machine Learning for Creating Creative Content» at Erasmus University College Brussels. In this 50-page thesis, I discussed the context and applications of machine learning and art, as well as explain the theories useful for creating interactive installations. During development, I experimented with several machine learning approaches before settling on a regression model, as it provided the most natural mapping between body movements and musical output. The creation of DanceMachine explores an alternative relationship between dance and music, where movement becomes the primary input for musical expression.",
     "year": 2018,
     "categories": ["media", "data"],
